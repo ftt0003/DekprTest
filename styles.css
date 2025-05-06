@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'monserrat';
+    src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  .logo > img{
+    width: 20rem;
+    height: 200px;
+  }
+  nav {
+    background-image: url('Imagen\ de\ inicio.svg');
+    background-size: cover;
+    background-position: center;  
+    
+  }
+  .subtitle{
+    color: #f0e8d9;
+    font-family: 'monserrat';
+    font-size: 40pt;
+    font-weight: bolder;
+    text-shadow: 0px 2px black;
+  }
+  .sidebar { 
+    position: sticky; 
+    top: 0; 
+    right: 0; 
+    width: 250px; 
+    background-color: #ffffff00; 
+    border-radius: 5px; 
+  } 
+  /*Ajustes del logo presente en el nava*/
+  nav > a{
+    animation-duration: 3s;
+    animation-name: slidein;
+    transform: scale(0.4);
+  }
+  nav > a:hover{
+    transform: scale(0.5);
+    transition-duration: 1s;
+  }
+
+.vivetext{
+    font-family: 'monserrat';
+    color: rgb(92, 31, 6);
+    font-size: 40pt;
+}
+.mejores-ventas{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.mejores-ventas .card {
+    border: none;
+}
+.imagefocus > img:hover{
+    transform: scale(1.05);
+    transition-duration: 2s;
+}
+
+  
+footer {
+    font-size: small;
+    background-color: rgb(92, 52, 3);
+    height: 30vh;
+  }
+.logo{
+    background-color: rgba(122, 55, 0, 0);
+    
+  }
+  .iconos{
+    display: flex;
+  }
+  .bg-beige {
+    background-color:#f0e8d9
+  }
+

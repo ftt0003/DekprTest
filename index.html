@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEKOR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar-expand-lg navbar-light bg-light vh-100">
+        <div class="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+          <a class="navbar-brand logo" href="#"><img src="DEKORLOG.png" alt="dekor"></a>
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Hero Section -->
+            <section class="hero text-center py-5">
+                <div class="container">
+                    <h1 class="subtitle">Decora tu hogar, con responsabilidad</h1>
+                </div>
+            </section>
+
+        </div>
+    </nav>
+
+    <!-- Mejores Ventas -->
+    <section class="mejores-ventas py-5 vh-100">
+        <div class="container vh-90">
+          <div class="row  align-items-center justify-contnet-end g-4 vh-100">
+            
+            <!-- Columna izquierda: título + botón + redes -->
+            <div class="col-lg-3 text-center text-lg-start">
+              <h2 class="vivetext mb-3">Mejores ventas</h2>
+              <a href="#" class="btn btn-outline-dark mb-4">Ver productos</a>
+      
+              <!-- Redes sociales apiladas -->
+              <div class="d-flex flex-lg-column align-items-center align-items-lg-start gap-3">
+                <a href="#"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#"><i class="bi bi-pinterest fs-4"></i></a>
+                <a href="#"><i class="bi bi-youtube fs-4"></i></a>
+              </div>
+            </div>
+      
+            <!-- Columna derecha: tarjetas de producto -->
+            <div class="col-lg-9 ">
+              <div class="row g-5">
+                <div class="col-md-4">
+                  <div class="card h-100 border-0 overflow-hidden imagefocus">
+                    <img src="/fotos/Jarrón Marea.jpg" alt="Marea - Jarrón Ondulado" class="card-img-top rounded">
+                    <div class="card-body text-center">
+                      <h5 class="fw-bold fs-1">Marea</h5>
+                      <p class="text-muted fs-4">Jarrón Ondulado</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100 border-0 overflow-hidden imagefocus">
+                    <img src="fotos/Posa-lámpara Orón.jpg" alt="Orón - Posa-lámparas Circular" class="card-img-top rounded">
+                    <div class="card-body text-center">
+                      <h5 class="fw-bold fs-1">Orón</h5>
+                      <p class="text-muted fs-4">Posa-lámparas Circular</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Categorías -->
+    <section class="categorias py-5 bg-beige" style="min-height: 100vh;">
+      <div class="container h-100">
+          <h2 class="vivetext text-center mb-5">Categorías</h2>
+          
+          <div class="row g-4 h-100"> <!-- Fila principal (altura completa) -->
+              <!-- Columna izquierda -->
+              <div class="col-lg-7 h-100">
+                  <div class="d-flex flex-column h-100 gap-3">
+                      <!-- Bloque superior: 2 imágenes en línea -->
+                      <div class="row g-3 flex-grow-1"> <!-- Usa espacio disponible -->
+                          <div class="col-6">
+                              <div class="h-100 w-100 overflow-hidden">
+                                  <img src="fotos/Frutero Perla 3 (negro).jpg" 
+                                       class="img-fluid w-100 h-100 object-fit-cover">
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="h-100 w-100 overflow-hidden">
+                                  <img src="fotos/Cocina.jpg" 
+                                       class="img-fluid w-100 h-100 object-fit-cover">
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Bloque inferior: 1 imagen ancho completo -->
+                      <div class="row flex-grow-1"> <!-- Usa espacio disponible -->
+                          <div class="col-12">
+                              <div class="h-100 w-100 overflow-hidden">
+                                  <img src="fotos/Salón.jpg" 
+                                       class="img-fluid w-100 h-100 object-fit-cover">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Columna derecha -->
+              <div class="col-lg-5 h-100 position-relative">
+                <div class="h-100 w-100 overflow-hidden">
+                    <img src="fotos/Habitación y Despacho.jpg" 
+                         class="img-fluid w-100 h-100 object-fit-cover"
+                         style="width: 105% !important; margin-left: -2.5%; height: 80% !important;"> <!-- Ajuste de ancho -->
+                </div>
+          </div>
+      </div>
+  </section>
+    <!-- Novedades -->
+    <section class="novedades py-5 vh-100">
+        <div class="container text-center">
+            <h2>Novedades</h2>
+            <!-- Producto destacado -->
+            <img src="#" alt="" class="img-fluid rounded mb-3 w-50 mx-auto d-block">
+            <h5>Nudo de Anillos</h5>
+            <p>Porta velas liso</p>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="sobre-nosotros py-5 bg-beige vh-100">
+        <div class="container text-center">
+            <h2>Sobre Nosotros</h2>
+            <p>DEKOR es una pequeña y nueva empresa que nace por la pasión de hacer un espacio...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 text-white text-center mt-auto">
+        DEKOR &copy; Todos los derechos reservados.
+        <br>
+        <div class="d-flex flex-row-reverse bd-highlight vw-90">
+            <div class="p-2 bd-highlight justify-contnet-end">
+                <i class=" fa-brands fa-instagram me-3" style="color: rgb(255, 255, 255); font-size: 28px"></i>
+                <i class=" fa-brands fa-facebook-f me-3" style="color: rgb(255, 255, 255);font-size: 28px"></i>
+                <i class=" fa-brands fa-pinterest-p me-3" style="color: rgb(255, 255, 255);font-size: 28px"></i>
+                <i class=" fa-brands fa-youtube me-3" style="color: rgb(255, 255, 255);font-size: 28px;"></i>
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
