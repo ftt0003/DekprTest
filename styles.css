@@ -2,6 +2,12 @@
     font-family: 'monserrat';
     src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
 }
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2") format("woff2"),
+       url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff") format("woff");
+}
+
 @keyframes slidein {
     from {
       margin-left: 100%;
@@ -12,6 +18,29 @@
       margin-left: 0%;
       width: 100%;
     }
+}
+
+/* Reset de alturas fijas */
+.vh-100 {
+  height: 100vh !important;
+}
+
+@media (max-width: 992px) {
+  .vh-100 {
+    height: auto !important;
+    min-height: 100vh;
+  }
+}
+
+/* Tipografía Responsive */
+.vivetext {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .vivetext {
+    font-size: 3rem;
+  }
 }
 body {
     font-family: 'Arial', sans-serif;
@@ -28,6 +57,9 @@ body {
     background-position: center;
       
     
+  }
+  .nav-not-index{
+    background: white;
   }
   .icono{
     width: 10rem;
@@ -73,7 +105,7 @@ body {
     border: none;
 }
 .espaciado-imagenes {
-    margin-top: 4rem; /* Ajusta este valor según necesites */
+    margin-top: 4rem; /* Ajusta este valor para las imagenes */
   }
   
   @media (min-width: 992px) {
@@ -92,7 +124,7 @@ body {
   
 footer {
     font-size: small;
-    background-color: rgb(92, 52, 3);
+    background-color:#E6DCCD;
     height: 30vh;
   }
 .logo{
@@ -109,9 +141,56 @@ hr{
   margin-left: 10%;
   width: 80%;
 }
-/* ================================================== */
+.carrito-content {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  height: 53%;
+  overflow: hidden;
+  z-index: 0;
+  isolation: isolate; /* Crea nuevo contexto de apilamiento */
+  /* Temporal para ver posición   border: 2px solid red; */
+}
+
+.carrito-content::before {
+  content: "\F179";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  font-size: 15rem;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.favoritos-content {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  height: 53%;
+  overflow: hidden;
+  z-index: 0;
+  isolation: isolate; /* Crea nuevo contexto de apilamiento */
+  /* Temporal para ver posición   border: 2px solid red; */
+}
+
+.favoritos-content::before {
+  content: "\F415";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  font-size: 15rem;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 /* ============= BARRA DE COOKIES ================== */
-/* ================================================== */
 .cookie-bar {
   position: fixed;
   bottom: 0;
@@ -309,7 +388,21 @@ hr{
   color: var(--color-text-dark);
   border: 1px solid var(--color-text-dark);
 }
-
+@media (max-width: 768px) {
+  .cookie-content {
+    flex-direction: column;
+  }
+  
+  .cookie-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cookie-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 /* ================================================== */
 /* =============== MENU LATERAL ===================== */
 /* ================================================== */
@@ -321,18 +414,16 @@ button.toggle{
   color: white;
   border: #f0e8d900;
 }
-.menu-lateral {
-    position: fixed;
-    left: -250px;
-    top: 20px;
-    width: 250px;
-    height: 100vh;
-    background: #f1f1f1;
-    transition: left 0.3s;
-    padding-top: 60px;
-    z-index: 999;
+button.toggle-secundary{
+  color: black;
 }
-
+.menu-lateral {
+  width: 250px;
+  transition: transform 0.3s;
+}
+.menu-lateral.active {
+  transform: translateX(0);
+}
 .menu-lateral a {
     display: block;
     color: rgb(105, 105, 105);
@@ -343,7 +434,15 @@ button.toggle{
 .menu-lateral a:hover {
     background: #ffffff;
 }
-
+@media (max-width: 992px) {
+  .menu-lateral {
+    transform: translateX(0) !important;
+  }
+  
+  button.toggle {
+    display: none !important;
+  }
+}
 .menu-lateral .social-icons {
     position: absolute;
     bottom: 100px;

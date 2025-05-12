@@ -1,4 +1,4 @@
- // =============================================
+ // Cookies
   const cookieBar = document.getElementById("cookie-bar");
   const cookieAcceptAll = document.getElementById("cookie-accept-all");
   const cookieAcceptNecessary = document.getElementById("cookie-accept-necessary");
@@ -114,9 +114,9 @@
       if (cookieModal) cookieModal.classList.remove("show");
     });
   }
- // =============================================
-  //            TOGGLE
-  // =============================================
+
+  //TOGGLE
+
  function toggleMenu() {
     document.querySelector('.menu-lateral').classList.toggle('active');
 }
