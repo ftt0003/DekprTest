@@ -49,6 +49,7 @@ body {
     width: 20rem;
     height: 200px;
   }
+
   nav {
      background: 
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Cortinilla */
@@ -60,6 +61,15 @@ body {
   }
   nav.nav-not-index{
     background: rgb(255, 255, 255);
+  }
+  nav.navbar-alt{
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Cortinilla */
+      url('fotos/Jarrón\ Balú\ 2.webp') center/cover; /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+      
+    
   }
   .icono{
     width: 10rem;
