@@ -58,8 +58,8 @@ body {
       
     
   }
-  .nav-not-index{
-    background: white;
+  nav.nav-not-index{
+    background: rgb(255, 255, 255);
   }
   .icono{
     width: 10rem;
