@@ -22,7 +22,7 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
-    <nav class="navbar-expand-lg navbar-light bg-light vh-20 nav-not-index">
+    <nav class="navbar-expand-lg navbar-light bg-white vh-20 nav-not-index">
         <div class="navbar">
             <button class="toggle toggle-secundary" onclick="toggleMenu()">☰</button>
 
@@ -50,6 +50,7 @@
                     </li>
                 </ul>
             </div>
+            <hr>
         </div>
         <div class="container-fluid">
 
@@ -60,59 +61,69 @@
         </div>
     </nav>
     <!--Main-->
-<main class="flex-grow-1">
-  <div class="container">
-    <div class="row justify-content-between gx-5">
-      <!-- Columna del formulario -->
-      <div class="col-12 col-md-6 mb-4 mb-md-0">
-        <h3 class="mb-4">DATOS PERSONALES</h3>
-        <form>
-          <div class="mb-3">
-            <input type="text" class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent" id="nombre" placeholder="Nombre" required>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent" id="apellidos" placeholder="Apellidos" required>
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent" id="email" placeholder="name@example.com" required>
-          </div>
-          <div class="mb-3">
-            <input type="password" class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent" id="contraseña" placeholder="Contraseña" required>
-          </div>
-          <div class="mb-3">
-            <input type="tel" class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent" id="telefono" placeholder="Teléfono" required>
-          </div>
-          <p class="text-muted small mb-4">Te enviaremos un SMS para verificar tu teléfono</p>
-          
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="politica-privacidad">
-            <label class="form-check-label small" for="politica-privacidad">
-              He podido leer y entiendo la información sobre el uso de
-              mis datos personales explicada en la Política de privacidad.
-            </label>
-          </div>
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="suscribirse-newsletter" checked>
-            <label class="form-check-label small" for="suscribirse-newsletter">
-              Quiero recibir novedades y comunicaciones comerciales
-              personalizadas de DEKOR a través del email y otros medios.
-            </label>
-          </div>
-          <button type="submit" class="btn btn-outline-dark w-100">CREAR CUENTA</button>
-        </form>
-      </div>
+    <main class="flex-grow-1">
+        <div class="container">
+            <div class="row justify-content-between gx-5">
+                <!-- Columna del formulario -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <h3 class="mb-4">DATOS PERSONALES</h3>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text"
+                                class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent"
+                                id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text"
+                                class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent"
+                                id="apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email"
+                                class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent"
+                                id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password"
+                                class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent"
+                                id="contraseña" placeholder="Contraseña" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel"
+                                class="form-control border-0 border-bottom rounded-0 border-secondary px-0 bg-transparent"
+                                id="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <p class="text-muted small mb-4">Te enviaremos un SMS para verificar tu teléfono</p>
 
-      <!-- Columna de la imagen -->
-      <div class="col-12 col-md-6 d-flex align-items-center">
-        <div class="ratio ratio-16x9">
-          <img src="fotos/Porta utensilios Pilu.jpg" 
-               alt="utensilios Pilu" 
-               class="img-fluid rounded-3 object-fit-cover">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="politica-privacidad">
+                            <label class="form-check-label small" for="politica-privacidad">
+                                He podido leer y entiendo la información sobre el uso de
+                                mis datos personales explicada en la Política de privacidad.
+                            </label>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="suscribirse-newsletter"
+                                checked>
+                            <label class="form-check-label small" for="suscribirse-newsletter">
+                                Quiero recibir novedades y comunicaciones comerciales
+                                personalizadas de DEKOR a través del email y otros medios.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark w-100">CREAR CUENTA</button>
+                    </form>
+                </div>
+
+                <!-- Columna de la imagen -->
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                    <div class="ratio ratio-16x9">
+                        <img src="fotos/Porta utensilios Pilu.jpg" alt="utensilios Pilu"
+                            class="img-fluid rounded-3 object-fit-cover">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
+    </main>
     <!-- Footer -->
     <footer class="py-3 py-lg-5">
         <!-- Copyright -->
@@ -130,7 +141,8 @@
                         <div class="col-6 col-lg-3">
                             <h5 class="fw-bold fs-4">Sobre Nosotros</h5>
                             <ul class="list-unstyled">
-                                <li><a href="quienessomos.html" class="text-decoration-none text-dark fs-5">Quienes somos</a></li>
+                                <li><a href="quienessomos.html" class="text-decoration-none text-dark fs-5">Quienes
+                                        somos</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark fs-5">Condiciones de compra</a>
                                 </li>
                             </ul>
