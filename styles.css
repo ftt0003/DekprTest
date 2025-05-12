@@ -21,13 +21,20 @@ body {
     height: 200px;
   }
   nav {
-    background-image: url('Imagen\ de\ inicio.svg');
+     background: 
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Cortinilla */
+      url('fotos/Imagen_de_inicio.webp') center/cover; /* Imagen de fondo */
     background-size: cover;
-    background-position: center;  
+    background-position: center;
+      
     
   }
+  .icono{
+    width: 10rem;
+    height: 10rem;
+  }
   .subtitle{
-    color: #f0e8d9;
+    color: #ffffff;
     font-family: 'monserrat';
     font-size: 40pt;
     font-weight: bolder;
@@ -62,13 +69,26 @@ body {
   margin-left: 5%;
 }
 .mejores-ventas .card {
+
     border: none;
 }
+.espaciado-imagenes {
+    margin-top: 4rem; /* Ajusta este valor según necesites */
+  }
+  
+  @media (min-width: 992px) {
+    .espaciado-imagenes {
+      margin-top: 6rem; /* Mayor espacio en desktop */
+    }
+  }
 .imagefocus > img:hover{
     transform: scale(1.05);
     transition-duration: 2s;
 }
-
+ .mejores-ventas .row.g-5 {
+    --bs-gutter-x: 6rem; /* Aumenta espacio horizontal entre cards */
+    --bs-gutter-y: 3rem; /* Aumenta espacio vertical entre cards */
+  }
   
 footer {
     font-size: small;
@@ -85,4 +105,258 @@ footer {
   .bg-beige {
     background-color:#f0e8d9
   }
+hr{
+  margin-left: 10%;
+  width: 80%;
+}
+/* ================================================== */
+/* ============= BARRA DE COOKIES ================== */
+/* ================================================== */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+    opacity 0.6s ease,
+    box-shadow 0.4s ease;
+  display: none;
+}
 
+.cookie-bar.show {
+  transform: translateY(0);
+  opacity: 1;
+  display: block;
+}
+
+.cookie-bar:hover {
+  box-shadow: 0 -5px 40px rgba(0,0,0,0.2);
+}
+
+.cookie-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.cookie-text {
+  flex: 1;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.6s ease 0.2s;
+}
+
+.cookie-bar.show .cookie-text {
+  opacity: 0.9;
+  transform: translateX(0);
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 
+    all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  font-family: "Stinger_Fit_Regular", sans-serif;
+  background: brown;
+  color: white;
+}
+
+.cookie-bar.show .cookie-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cookie-button.accept-all {
+  background: rgba(245, 142, 83, 0.849);
+  color: white;
+}
+
+.cookie-button.accept-necessary {
+  background:  rgb(245, 142, 83);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+}
+
+.cookie-button.configure {
+  background:  rgb(245, 142, 83);
+  color: white;
+}
+
+.cookie-button:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Modal de Configuración */
+.cookie-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 10000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cookie-modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: white;
+  color: var(--color-text-dark);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 
+    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.4s ease;
+}
+
+.cookie-modal.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.modal-content h3 {
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.cookie-option {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(211, 201, 201);
+}
+
+.option-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.option-header input {
+  margin-right: 10px;
+}
+
+.option-header label {
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.option-description {
+  font-size: 0.85rem;
+  color: white;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cookie-button.save {
+  background: var(--color-accent);
+  color: white;
+}
+
+.cookie-button.cancel {
+  background: transparent;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-text-dark);
+}
+
+/* ================================================== */
+/* =============== MENU LATERAL ===================== */
+/* ================================================== */
+button.toggle{
+  width: 10rem;
+  height: 10rem;
+  font-size: 50pt;
+  background-color:#f0e8d900;
+  color: white;
+  border: #f0e8d900;
+}
+.menu-lateral {
+    position: fixed;
+    left: -250px;
+    top: 20px;
+    width: 250px;
+    height: 100vh;
+    background: #f1f1f1;
+    transition: left 0.3s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.menu-lateral a {
+    display: block;
+    color: rgb(105, 105, 105);
+    padding: 15px;
+    text-decoration: none;
+}
+
+.menu-lateral a:hover {
+    background: #ffffff;
+}
+
+.menu-lateral .social-icons {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-lateral .social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+
+/* Mostrar el menú */
+.menu-lateral.active {
+    left: 0;
+}
