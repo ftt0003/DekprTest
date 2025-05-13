@@ -1,13 +1,37 @@
+/*===================================================
+        BLOQUE FUESTES DE TEXTO
+=====================================================*/
+/*Fuente Texto Basico*/
 @font-face {
     font-family: 'monserrat';
     src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
 }
+
 @font-face {
   font-family: "bootstrap-icons";
   src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2") format("woff2"),
        url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff") format("woff");
 }
-
+/*Fuente Seasons Bold --> Banners*/
+@font-face {
+  font-family: 'seasons-bold';
+  src: url(/fonts/the-seasons/the-seasons.ttf);
+}
+/*Fuente Open_Sans Bold --> Barra de busqueda
+  Fuente Open_Sans Blold --> Titulos de productos
+*/
+@font-face {
+  font-family: 'Open_Sans-Bold';
+  src: url("/fonts/Open_Sans/static/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: 'Open_Sans-Regular';
+  src: url("/fonts/Open_Sans/static/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: 'Glacial-indifference';
+  src: url("fonts/glacial-indifference/glacial-indifference.regular.otf");
+}
 @keyframes slidein {
     from {
       margin-left: 100%;
@@ -19,7 +43,7 @@
       width: 100%;
     }
 }
-
+/*CSS Pagina principal                          */
 /* Reset de alturas fijas */
 .vh-100 {
   height: 100vh !important;
