@@ -1,3 +1,4 @@
+
 /*===================================================
         BLOQUE FUESTES DE TEXTO
 =====================================================*/
@@ -12,11 +13,13 @@
   src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2") format("woff2"),
        url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff") format("woff");
 }
+
 /*Fuente Seasons Bold --> Banners*/
 @font-face {
   font-family: 'seasons-bold';
   src: url(/fonts/the-seasons/the-seasons.ttf);
 }
+
 /*Fuente Open_Sans Bold --> Barra de busqueda
   Fuente Open_Sans Blold --> Titulos de productos
 */
@@ -28,6 +31,8 @@
   font-family: 'Open_Sans-Regular';
   src: url("/fonts/Open_Sans/static/OpenSans-Regular.ttf");
 }
+
+
 @font-face {
   font-family: 'Glacial-indifference';
   src: url("fonts/glacial-indifference/glacial-indifference.regular.otf");
@@ -230,10 +235,9 @@ hr{
   bottom: 0;
   left: 0;
   width: 100%;
-  background: black;
-  color: white;
+  background: rgb(255, 255, 255);
   padding: 15px 20px;
-  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.445);
   z-index: 9999;
   transform: translateY(100%);
   opacity: 0;
@@ -243,7 +247,17 @@ hr{
     box-shadow 0.4s ease;
   display: none;
 }
-
+.cookie-text{
+  font-family: 'Open_Sans-Regular';
+  font-size: 12pt;
+  color: black;
+}
+.cookie-text > a{
+  font-family: 'Open_Sans-Bold';
+  font-size: 12pt;
+  color: black;
+  text-decoration-line: underline black;
+}
 .cookie-bar.show {
   transform: translateY(0);
   opacity: 1;
@@ -292,9 +306,8 @@ hr{
     transform 0.3s ease;
   opacity: 1;
   transform: translateY(0);
-  font-family: "Stinger_Fit_Regular", sans-serif;
-  background: brown;
-  color: white;
+  font-family: 'Open_Sans-Regular';
+
 }
 
 .cookie-bar.show .cookie-button {
@@ -303,24 +316,29 @@ hr{
 }
 
 .cookie-button.accept-all {
-  background: rgba(245, 142, 83, 0.849);
+  background: rgb(0, 0, 0);
   color: white;
 }
 
 .cookie-button.accept-necessary {
-  background:  rgb(245, 142, 83);
+  background:  rgb(0, 0, 0);
   color: var(--color-text-light);
   border: 1px solid var(--color-text-light);
 }
 
 .cookie-button.configure {
-  background:  rgb(245, 142, 83);
+  background:  rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+}
+.cookie-button.accept-necessary{
+  background-color: black;
   color: white;
 }
-
 .cookie-button:hover {
   opacity: 1;
   transform: translateY(-3px) scale(1.05);
+  
 }
 
 /* Modal de Configuración */
@@ -490,6 +508,113 @@ button.toggle-secundary{
 }
 
 /* Mostrar el menú */
+
 .menu-lateral.active {
     left: 0;
+}
+/*TEXTOS LEGALES*/
+h1.texto-justificado {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center; 
+    color: #333; 
+    position: relative;
+}
+.container-legales {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  margin-top: 30px;
+}
+.menu-vertical {
+  background: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto; /* Scroll solo si el menú es muy largo */
+}
+
+.menu-vertical ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-vertical a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-vertical a.active {
+    font-weight: bold;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.menu-vertical a:hover {
+    background: #e9ecef;
+}
+
+.contenido-principal {
+  overflow-y: auto; /* Scroll independiente */
+  height: 100vh;
+  padding-top: 200px;
+
+}
+.centro-contenido {
+  max-width: 800px; /* Ancho máximo del contenido */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.contenido-texto {
+  text-align: justify;
+  line-height: 1.6;
+}
+.contenido-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-justificado {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    white-space: pre-wrap; /* Mantiene saltos de línea originales */
+}
+
+
+.texto-justificado {
+    font-family: 'Open_Sans-Regular', monospace;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .container-legales {
+        grid-template-columns: 1fr; /* Menú arriba en móviles */
+    }
+    
+    .menu-vertical {
+        height: auto; /* Altura automática */
+        position: static; /* Quita el sticky */
+        grid-column: 1;
+    }
+    
+    .contenido-principal {
+        grid-column: 1;
+    }
+}
+footer.footer-avisos-legales{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    z-index: 1000;
+    font-size: small;
+    background-color:#E6DCCD;
+    height: 30vh;
 }

@@ -120,3 +120,24 @@
  function toggleMenu() {
     document.querySelector('.menu-lateral').classList.toggle('active');
 }
+
+//TEXTOS LEGALES
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.menu-vertical a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${entry.target.id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Observa todas las secciones
+    document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+    });
+});
