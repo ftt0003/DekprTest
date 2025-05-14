@@ -120,6 +120,12 @@ body {
     background-color: #ffffff00; 
     border-radius: 5px; 
   } 
+  .search-btn{
+    border: none;
+  }
+  .search-bar::placeholder{
+    color:white;    
+  }
   /*Ajustes del logo presente en el nava*/
   nav > a{
     animation-duration: 3s;
