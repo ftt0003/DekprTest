@@ -73,6 +73,7 @@
 }
 body {
     font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
   }
   .logo > img{
     width: 20rem;
