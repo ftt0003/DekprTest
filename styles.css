@@ -145,12 +145,14 @@ body {
 }
 .espaciado-imagenes {
     margin-top: 4rem; /* Ajusta este valor para las imagenes */
+    margin-bottom: 4rem;
   }
   
   @media (min-width: 992px) {
     .espaciado-imagenes {
       margin-top: 6rem; /* Mayor espacio en desktop */
     }
+
   }
 .imagefocus > img:hover{
     transform: scale(1.05);
@@ -162,9 +164,10 @@ body {
   }
   
 footer {
+    margin-bottom: 0;
     font-size: small;
     background-color:#E6DCCD;
-    height: 30vh;
+    height: 50vh;
   }
 .logo{
     background-color: rgba(122, 55, 0, 0);
@@ -618,3 +621,4 @@ footer.footer-avisos-legales{
     background-color:#E6DCCD;
     height: 30vh;
 }
+
