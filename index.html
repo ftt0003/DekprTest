@@ -19,6 +19,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <script defer="" src="script.js"></script>
+  <script src="newsletter.js"></script>
 </head>
 
 
@@ -111,37 +112,62 @@
       </div>
     </div>
   </section>
-
-  <!-- Categorías Corregido -->
-  <section class="categorias py-5 bg-light">
+  <!--SECCION CATEGORIAS-->
+<section id="categories" class="py-5 py-lg-7 bg-light">
     <div class="container">
       <h2 class="display-5 fw-bold text-center mb-5">Categorías</h2>
       
       <div class="row g-4">
-        <div class="col-12 col-lg-8">
-          <div class="row g-4 h-100">
-            <div class="col-12 col-md-6">
-              <div class="ratio ratio-16x9 h-100">
-                <img src="fotos/Frutero Perla 3 (negro).jpg" class="img-fluid object-fit-cover">
+        <div class="col-md-6">
+          <a href="category/bano.html" class="text-decoration-none">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="ratio ratio-1x1 imagefocus">
+                <img src="fotos/Frutero Perla 3 (negro).jpg" class="card-img-top object-fit-cover">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="card-title text-white fw-bold mb-3">Baño</h3>
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="ratio ratio-16x9 h-100">
-                <img src="fotos/Cocina.jpg" class="img-fluid object-fit-cover">
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="ratio ratio-21x9">
-                <img src="fotos/Salón.jpg" class="img-fluid object-fit-cover">
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
         
-        <div class="col-12 col-lg-4">
-          <div class="ratio ratio-4x5 h-100">
-            <img src="fotos/Habitación y Despacho.jpg" class="img-fluid object-fit-cover">
-          </div>
+        <div class="col-md-6">
+          <a href="category/cocina.html" class="text-decoration-none">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="ratio ratio-1x1 imagefocus">
+                <img src="fotos/Cocina.jpg" class="card-img-top object-fit-cover">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="card-title text-white fw-bold mb-3">Cocina</h3>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a href="category/salon.html" class="text-decoration-none">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="ratio ratio-1x1 imagefocus">
+                <img src="fotos/Salón.jpg" class="card-img-top object-fit-cover">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="card-title text-white fw-bold mb-3">Salón</h3>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a href="category/habitacion.html" class="text-decoration-none">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="ratio ratio-1x1 imagefocus">
+                <img src="fotos/Habitación y Despacho.jpg" class="card-img-top object-fit-cover">
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="card-title text-white fw-bold mb-3">Habitación / Despacho</h3>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -213,9 +239,12 @@
             <div class="col-6 col-lg-3">
               <h5 class="fw-bold fs-4">Únete</h5>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Newsletter</a></li>
+                <li><a href="#" class="text-decoration-none text-dark fs-5" id="newsletter-link">Newsletter</a></li>
                 <li>
-                  <input type="email" class="form-control form-control-sm" placeholder="Tu email">
+                  <div class="newsletter-footer mt-2">
+                    <input type="email" id="footer-email" class="form-control form-control-sm" placeholder="Tu email">
+                    <button id="footer-subscribe" class="newsletter-btn mt-2">Suscribirse</button>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -261,6 +290,44 @@
     </div>
   </div>
 
+<!-- Popup de Newsletter -->
+<div id="newsletter-popup" class="newsletter-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 10000; justify-content: center; align-items: center;">
+  <div class="newsletter-popup-content">
+    <button class="close-popup" onclick="cerrarPopupNewsletter()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <div class="newsletter-container">
+      <div class="newsletter-text">
+        <h2>Regístrate gratis y recibe actualizaciones exclusivas y ofertas VIP</h2>
+        
+        <form id="newsletter-form">
+          <div class="mb-3">
+            <input type="email" id="newsletter-email" class="form-control" placeholder="Tu email" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="newsletter-cookies" required>
+            <label class="form-check-label" for="newsletter-cookies">
+              Acepto recibir comunicaciones comerciales
+            </label>
+          </div>
+          <div id="newsletter-message" class="newsletter-message"></div>
+          <button type="submit" class="newsletter-cta">¡ÚNETE AHORA!</button>
+        </form>
+        
+        <p class="newsletter-disclaimer">
+          *Al unirte expresas tu consentimiento para recibir comunicaciones comerciales de DEKOR. Puedes cancelar tu suscripción en cualquier momento. Consulta nuestra <a href="/politica_cookies.html">Política de Privacidad</a> para más información.
+        </p>
+      </div>
+      
+      <div class="newsletter-image">
+        <img src="fotos/newsletter.png" alt="Decoración minimalista DEKOR">
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
