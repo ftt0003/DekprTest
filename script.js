@@ -20,7 +20,7 @@ function toggleMenu() {
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Categorías</a></li>
                 <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
             </ul>
             
             <h5 class="mb-3 mt-4">Categorías</h5>
@@ -88,6 +88,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar funcionalidades específicas según la página
   initPageSpecificFunctions()
+
+  // Inicializar el botón de login
+  const loginButton = document.getElementById("login-button")
+  if (loginButton) {
+    loginButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      const loginModal = document.getElementById("login-modal")
+      if (loginModal) {
+        loginModal.style.display = "block"
+        document.body.style.overflow = "hidden" // Evitar scroll en el fondo
+      }
+    })
+  }
+
+  // Cerrar el modal de login al hacer clic en la X
+  const closeLoginModal = document.querySelector(".close-login-modal")
+  if (closeLoginModal) {
+    closeLoginModal.addEventListener("click", () => {
+      document.getElementById("login-modal").style.display = "none"
+      document.body.style.overflow = "auto" // Restaurar scroll
+    })
+  }
+
+  // Cerrar el modal de login al hacer clic fuera del contenido
+  window.addEventListener("click", (event) => {
+    const loginModal = document.getElementById("login-modal")
+    if (event.target === loginModal) {
+      loginModal.style.display = "none"
+      document.body.style.overflow = "auto" // Restaurar scroll
+    }
+  })
 })
 
 // Mostrar modal de configuración de cookies

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer="" src="script.js"></script>
   <script src="newsletter.js"></script>
+  <script src="auth.js"></script>
 </head>
 
 
@@ -39,7 +40,7 @@
       <div class="cont-icons m-3">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="registro.html"><i class="bi bi-person-fill text-white"
+            <a class="nav-link active" onclick="mostrarPopupAuth()"><i class="bi bi-person-fill text-white"
                 style="font-size: 2rem;"></i></a>
           </li>
           <li class="nav-item">
@@ -124,7 +125,7 @@
               <div class="ratio ratio-1x1 imagefocus">
                 <img src="fotos/Frutero Perla 3 (negro).jpg" class="card-img-top object-fit-cover">
                 <div class="card-img-overlay d-flex align-items-end">
-                  <h3 class="card-title text-white fw-bold mb-3">Baño</h3>
+                  <h3 class="card-title text-white fs-1 fw-bold mb-3">Baño</h3>
                 </div>
               </div>
             </div>
@@ -137,7 +138,7 @@
               <div class="ratio ratio-1x1 imagefocus">
                 <img src="fotos/Cocina.jpg" class="card-img-top object-fit-cover">
                 <div class="card-img-overlay d-flex align-items-end">
-                  <h3 class="card-title text-white fw-bold mb-3">Cocina</h3>
+                  <h3 class="card-title text-white fs-1 fw-bold mb-3">Cocina</h3>
                 </div>
               </div>
             </div>
@@ -150,7 +151,7 @@
               <div class="ratio ratio-1x1 imagefocus">
                 <img src="fotos/Salón.jpg" class="card-img-top object-fit-cover">
                 <div class="card-img-overlay d-flex align-items-end">
-                  <h3 class="card-title text-white fw-bold mb-3">Salón</h3>
+                  <h3 class="card-title text-white fs-1 fw-bolder mb-3">Salón</h3>
                 </div>
               </div>
             </div>
@@ -163,7 +164,7 @@
               <div class="ratio ratio-1x1 imagefocus">
                 <img src="fotos/Habitación y Despacho.jpg" class="card-img-top object-fit-cover">
                 <div class="card-img-overlay d-flex align-items-end">
-                  <h3 class="card-title text-white fw-bold mb-3">Habitación / Despacho</h3>
+                  <h3 class="card-title text-white fs-1 fw-bold mb-3">Habitación / Despacho</h3>
                 </div>
               </div>
             </div>
@@ -179,7 +180,7 @@
       <div class="row g-4 align-items-center">
         <div class="col-lg-4 order-lg-1 text-center text-lg-start">
           <h2 class="display-5 fw-bold mb-4">Novedades</h2>
-          <a href="#" class="btn btn-dark btn-lg rounded-pill px-4">Ver productos</a>
+          <a href="#" class="btn border-dark btn-lg rounded-pill px-4">Ver productos</a>
         </div>
         
         <div class="col-lg-8 order-lg-0">
@@ -197,77 +198,67 @@
     </div>
   </section>
 
-  <footer class="py-5 py-lg-4">
-    <!-- Copyright -->
-    <div class="row mt-4">
-      <div class="col-12 text-center">
-        <span class="sb fw-bold fs-5">DEKOR &copy; Todos los derechos reservados.</span>
+ <!-- Footer -->
+  <footer class="bg-light mt-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="LOGO 2.png" alt="DEKOR" height="80" class="mb-4">
+          <p class="text-muted">Decora tu hogar con sostenibilidad. Productos artesanales y respetuosos con el medio ambiente.</p>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="quienessomos.html" class="text-decoration-none text-muted">Quienes somos</a></li>
+            <li class="mb-2"><a href="condiciones-compra.html" class="text-decoration-none text-muted">Condiciones de compra</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Información</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="avisoslegales.html" class="text-decoration-none text-muted">Aviso legal</a></li>
+            <li class="mb-2"><a href="privacidad.html" class="text-decoration-none text-muted">Privacidad</a></li>
+            <li class="mb-2"><a href="cookies.html" class="text-decoration-none text-muted">Cookies</a></li>
+            <li class="mb-2"><a href="devoluciones.html" class="text-decoration-none text-muted">Política de devolución</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Enlaces</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="contacto.html" class="text-decoration-none text-muted">Contáctanos</a></li>
+            <li class="mb-2"><a href="faq.html" class="text-decoration-none text-muted">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Únete</h5>
+          <p class="text-muted mb-2">Suscríbete a nuestra newsletter</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Tu email">
+            <button class="btn btn-dark" type="button">Enviar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4 pt-4 border-top">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-muted mb-0">&copy; 2025 DEKOR. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3">
+            <a href="#" class="text-muted"><i class="fab fa-instagram fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-facebook-f fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-pinterest fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-youtube fs-5"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-    </div><br><br>
-    <div class="container">
-      <div class="row g-4">
-        <!-- Columnas de enlaces -->
-        <div class="col-12 col-lg-8">
-          <div class="row">
-            <div class="col-6 col-lg-3">
-              <h5 class="fw-bold fs-4">Sobre Nosotros</h5>
-              <ul class="list-unstyled">
-                <li><a href="quienessomos.html" class="text-decoration-none text-dark fs-5">Quienes somos</a></li>
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Condiciones de compra</a></li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-lg-3">
-              <h5 class="fw-bold fs-4">Información</h5>
-              <ul class="list-unstyled">
-                <li><a href="avisoslegales.html" class="text-decoration-none text-dark fs-5">Aviso legal</a></li>
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Privacidad</a></li>
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Cookies</a></li>
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Política de devolución</a></li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-lg-3">
-              <h5 class="fw-bold fs-4">Enlaces</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Contáctanos</a></li>
-                <li><a href="#" class="text-decoration-none text-dark fs-5">Preguntas frecuentes</a></li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-lg-3">
-              <h5 class="fw-bold fs-4">Únete</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-decoration-none text-dark fs-5" id="newsletter-link">Newsletter</a></li>
-                <li>
-                  <div class="newsletter-footer mt-2">
-                    <input type="email" id="footer-email" class="form-control form-control-sm" placeholder="Tu email">
-                    <button id="footer-subscribe" class="newsletter-btn mt-2">Suscribirse</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Redes sociales -->
-        <div class="col-12 col-lg-4 text-lg-end">
-          <div class="d-flex justify-content-lg-end gap-3">
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
-                style="color: rgb(0, 0, 0); font-size: 28px"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"
-                style="color: rgb(0, 0, 0); font-size: 28px"></i></a>
-            <a href="https://es.pinterest.com/"><i class="fa-brands fa-pinterest-p"
-                style="color: rgb(0, 0, 0); font-size: 28px"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"
-                style="color: rgb(0, 0, 0); font-size: 28px;"></i></a>
-          </div>
-        </div>
-      </div>
-
-
   </footer>
+
   <div id="cookie-bar" class="cookie-bar show" style="display: block;">
     <div class="cookie-content">
       <div class="cookie-text">
@@ -324,6 +315,138 @@
       
       <div class="newsletter-image">
         <img src="fotos/newsletter.png" alt="Decoración minimalista DEKOR">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup de Login/Registro -->
+<div id="auth-popup" class="newsletter-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 10000; justify-content: center; align-items: center;">
+  <div class="newsletter-popup-content">
+    <button class="close-popup" onclick="cerrarPopupAuth()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <div class="newsletter-container">
+      <div class="newsletter-text">
+        <!-- Pestañas de navegación -->
+        <div class="auth-tabs">
+          <button id="login-tab" class="auth-tab active" onclick="mostrarTab('login')">Iniciar sesión</button>
+          <button id="register-tab" class="auth-tab" onclick=""><a class="text-decoration-none text-dark" href="registro.html">Crear cuenta</a></button>
+        </div>
+        
+        <!-- Formulario de Login -->
+        <div id="login-form-container" class="auth-form-container active">
+          <h2>Accede a tu cuenta</h2>
+          
+          <form id="login-form">
+            <div class="mb-3">
+              <input type="email" id="login-email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" id="login-password" class="form-control" placeholder="Contraseña" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="remember-me">
+              <label class="form-check-label" for="remember-me">
+                Recordar mi sesión
+              </label>
+            </div>
+            <div class="mb-3 text-end">
+              <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div id="login-message" class="newsletter-message"></div>
+            <button type="submit" class="newsletter-cta">INICIAR SESIÓN</button>
+          </form>
+          
+          <div class="social-login">
+            <div class="divider">
+              <span>O inicia sesión con</span>
+            </div>
+            <div class="social-buttons">
+              <button class="social-btn facebook-btn">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button class="social-btn google-btn">
+                <i class="fab fa-google"></i>
+              </button>
+              <button class="social-btn instagram-btn">
+                <i class="fab fa-instagram"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulario de Registro -->
+        <div id="register-form-container" class="auth-form-container">
+          <h2>Crea tu cuenta</h2>
+          
+          <form id="register-form">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" id="register-nombre" class="form-control" placeholder="Nombre" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="text" id="register-apellidos" class="form-control" placeholder="Apellidos" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="email" id="register-email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" id="register-telefono" class="form-control" placeholder="Teléfono" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" id="register-password" class="form-control" placeholder="Contraseña" required>
+              <div class="form-text small">
+                La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una minúscula y un número.
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="password" id="register-confirm-password" class="form-control" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="register-privacy" required>
+              <label class="form-check-label" for="register-privacy">
+                He leído y acepto la <a href="/informacion#privacidad">Política de Privacidad</a>
+              </label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="register-newsletter">
+              <label class="form-check-label" for="register-newsletter">
+                Deseo recibir ofertas y novedades por email
+              </label>
+            </div>
+            <div id="register-message" class="newsletter-message"></div>
+            <button type="submit" class="newsletter-cta">CREAR CUENTA</button>
+          </form>
+          
+          <div class="social-login">
+            <div class="divider">
+              <span>O regístrate con</span>
+            </div>
+            <div class="social-buttons">
+              <button class="social-btn facebook-btn">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button class="social-btn google-btn">
+                <i class="fab fa-google"></i>
+              </button>
+              <button class="social-btn instagram-btn">
+                <i class="fab fa-instagram"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p class="newsletter-disclaimer">
+          *Al iniciar sesión o registrarte, aceptas nuestros <a href="/terminos">Términos y Condiciones</a> y confirmas que has leído nuestra <a href="/informacion#privacidad">Política de Privacidad</a>.
+        </p>
+      </div>
+      
+      <div class="newsletter-image">
+        <img src="fotos/Banner2.webp" alt="DEKOR - Tu hogar, tu estilo">
       </div>
     </div>
   </div>
