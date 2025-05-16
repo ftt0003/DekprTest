@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Francisco Teruel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  
+  <title>DEKOR - Porta Utensilios Pilu</title>
+  
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <a class="navbar-brand mx-auto mx-lg-0" href="../index.html">
+        <img src="../LOGO 2.png" alt="DEKOR" height="40">
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../category/salon.html">Salón</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../category/cocina.html">Cocina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../category/habitacion.html">Habitación / Despacho</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../category/bano.html">Baño</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="d-flex align-items-center">
+        <form class="d-none d-lg-flex me-3" role="search">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+        
+        <div class="d-flex">
+          <a href="#" class="btn btn-link text-dark p-2" id="loginButton">
+            <i class="bi bi-person fs-5"></i>
+          </a>
+          <a href="../cart.html" class="btn btn-link text-dark p-2 position-relative">
+            <i class="bi bi-bag fs-5"></i>
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+              0
+            </span>
+          </a>
+          <a href="../favoritos.html" class="btn btn-link text-dark p-2">
+            <i class="bi bi-heart fs-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb -->
+  <div class="container py-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none text-muted">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="../category/cocina.html" class="text-decoration-none text-muted">Cocina</a></li>
+        <li class="breadcrumb-item"><a href="../category/cocina.html" class="text-decoration-none text-muted">Porta Utensilios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Pilu</li>
+      </ol>
+    </nav>
+  </div>
+  
+  <main class="flex-grow-1 py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Product Images -->
+        <div class="col-md-6">
+          <div class="product-images">
+            <!-- Main Image Swiper -->
+            <div class="swiper product-main-swiper mb-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the image here -->
+                    <div class="bg-light d-flex align-items-center justify-content-center">
+                      <span class="text-muted">Imagen principal</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the image here -->
+                    <div class="bg-light d-flex align-items-center justify-content-center">
+                      <span class="text-muted">Imagen 2</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the image here -->
+                    <div class="bg-light d-flex align-items-center justify-content-center">
+                      <span class="text-muted">Imagen 3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            
+            <!-- Thumbnail Swiper -->
+            <div class="swiper product-thumb-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the thumbnail here -->
+                    <div class="bg-light"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the thumbnail here -->
+                    <div class="bg-light"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ratio ratio-1x1">
+                    <!-- You'll add the thumbnail here -->
+                    <div class="bg-light"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Info -->
+        <div class="col-md-6">
+          <h1 class="h2 mb-2">Porta Utensilios Pilu</h1>
+          <p class="text-muted mb-4">Cocina - Porta Utensilios</p>
+          
+          <p class="h3 mb-4">29,99 €</p>
+          
+          <div class="mb-4">
+            <h3 class="h6 mb-3">Color:</h3>
+            <div class="d-flex gap-2">
+              <button class="btn p-2 border rounded-circle color-option" data-color="natural" style="background-color: #D2B48C; width: 30px; height: 30px;"></button>
+              <button class="btn p-2 border rounded-circle color-option active" data-color="white" style="background-color: white; width: 30px; height: 30px;"></button>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h3 class="h6 mb-3">Tamaño:</h3>
+            <div class="d-flex gap-2 flex-wrap">
+              <button class="btn btn-outline-dark size-option active" data-size="standard">Estándar</button>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h3 class="h6 mb-3">Cantidad:</h3>
+            <div class="d-flex align-items-center">
+              <button class="btn btn-outline-dark quantity-btn decrease">-</button>
+              <input type="number" class="form-control text-center mx-2 quantity-input" value="1" min="1" max="99" style="width: 60px;">
+              <button class="btn btn-outline-dark quantity-btn increase">+</button>
+            </div>
+          </div>
+          
+          <div class="d-grid gap-2 mb-4">
+            <button class="btn btn-dark add-to-cart-btn" data-id="3">Añadir al carrito</button>
+            <button class="btn btn-outline-dark">Añadir a favoritos</button>
+          </div>
+          
+          <div class="accordion" id="productAccordion">
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription">
+                  Descripción
+                </button>
+              </h2>
+              <div id="collapseDescription" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                <div class="accordion-body">
+                  <p>Porta Utensilios con estilo rústico para guardar tus utensilios de cocina. Fabricado con materiales sostenibles.</p>
+                  <p>Su diseño funcional y estético te permitirá mantener tus utensilios de cocina organizados y a mano mientras añades un toque decorativo a tu cocina.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDetails">
+                  Detalles
+                </button>
+              </h2>
+              <div id="collapseDetails" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                <div class="accordion-body">
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><strong>Material:</strong> Cerámica</li>
+                    <li class="mb-2"><strong>Dimensiones:</strong> 15cm x 15cm x 20cm</li>
+                    <li class="mb-2"><strong>Colores:</strong> Natural, Blanco</li>
+                    <li class="mb-2"><strong>Peso:</strong> 0.8kg</li>
+                    <li class="mb-2"><strong>Cuidados:</strong> Lavar a mano con agua tibia y jabón suave</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping">
+                  Envío y devoluciones
+                </button>
+              </h2>
+              <div id="collapseShipping" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                <div class="accordion-body">
+                  <p><strong>Envío estándar:</strong> 3-5 días laborables (4,95€). Gratis para pedidos superiores a 50€.</p>
+                  <p><strong>Envío express:</strong> 1-2 días laborables (9,95€).</p>
+                  <p><strong>Devoluciones:</strong> Dispones de 30 días para devolver tu pedido. Consulta nuestra <a href="../devoluciones.html" class="text-decoration-none">política de devoluciones</a> para más información.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-wrap gap-4 mt-4">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-truck fs-5"></i>
+              <span>Envío gratis +50€</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-shield-check fs-5"></i>
+              <span>Garantía de calidad</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-arrow-return-left fs-5"></i>
+              <span>30 días de devolución</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Related Products -->
+      <section class="mt-5 pt-5 border-top">
+        <h2 class="h3 mb-4">También te puede interesar</h2>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="marea.html" class="text-decoration-none text-dark">
+                <div class="ratio ratio-1x1">
+                  <!-- You'll add the image here -->
+                  <div class="bg-light d-flex align-items-center justify-content-center">
+                    <span class="text-muted">Imagen producto</span>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title">Marea</h3>
+                  <p class="card-text text-muted">Jarrón Ondulado</p>
+                  <p class="fw-bold">19,99 €</p>
+                </div>
+              </a>
+              <div class="card-footer bg-white border-0 p-3">
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark flex-grow-1 add-to-cart-btn" data-id="1">Añadir al carrito</button>
+                  <button class="btn btn-outline-dark">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="oron.html" class="text-decoration-none text-dark">
+                <div class="ratio ratio-1x1">
+                  <!-- You'll add the image here -->
+                  <div class="bg-light d-flex align-items-center justify-content-center">
+                    <span class="text-muted">Imagen producto</span>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title">Orón</h3>
+                  <p class="card-text text-muted">Posa-lámparas</p>
+                  <p class="fw-bold">24,99 €</p>
+                </div>
+              </a>
+              <div class="card-footer bg-white border-0 p-3">
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark flex-grow-1 add-to-cart-btn" data-id="2">Añadir al carrito</button>
+                  <button class="btn btn-outline-dark">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="perla.html" class="text-decoration-none text-dark">
+                <div class="ratio ratio-1x1">
+                  <!-- You'll add the image here -->
+                  <div class="bg-light d-flex align-items-center justify-content-center">
+                    <span class="text-muted">Imagen producto</span>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title">Perla</h3>
+                  <p class="card-text text-muted">Frutero</p>
+                  <p class="fw-bold">34,99 €</p>
+                </div>
+              </a>
+              <div class="card-footer bg-white border-0 p-3">
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark flex-grow-1 add-to-cart-btn" data-id="4">Añadir al carrito</button>
+                  <button class="btn btn-outline-dark">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+              <a href="nudillos.html" class="text-decoration-none text-dark">
+                <div class="ratio ratio-1x1">
+                  <!-- You'll add the image here -->
+                  <div class="bg-light d-flex align-items-center justify-content-center">
+                    <span class="text-muted">Imagen producto</span>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title">Nudillos</h3>
+                  <p class="card-text text-muted">Porta Velas</p>
+                  <p class="fw-bold">15,99 €</p>
+                </div>
+              </a>
+              <div class="card-footer bg-white border-0 p-3">
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark flex-grow-1 add-to-cart-btn" data-id="5">Añadir al carrito</button>
+                  <button class="btn btn-outline-dark">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-light mt-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="../LOGO 2.png" alt="DEKOR" height="40" class="mb-4">
+          <p class="text-muted">Decora tu hogar con sostenibilidad. Productos artesanales y respetuosos con el medio ambiente.</p>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../quienes-somos.html" class="text-decoration-none text-muted">Quienes somos</a></li>
+            <li class="mb-2"><a href="../condiciones-compra.html" class="text-decoration-none text-muted">Condiciones de compra</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Información</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../aviso-legal.html" class="text-decoration-none text-muted">Aviso legal</a></li>
+            <li class="mb-2"><a href="../privacidad.html" class="text-decoration-none text-muted">Privacidad</a></li>
+            <li class="mb-2"><a href="../cookies.html" class="text-decoration-none text-muted">Cookies</a></li>
+            <li class="mb-2"><a href="../devoluciones.html" class="text-decoration-none text-muted">Política de devolución</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Enlaces</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../contacto.html" class="text-decoration-none text-muted">Contáctanos</a></li>
+            <li class="mb-2"><a href="../faq.html" class="text-decoration-none text-muted">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-3">Únete</h5>
+          <p class="text-muted mb-2">Suscríbete a nuestra newsletter</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Tu email">
+            <button class="btn btn-dark" type="button" id="newsletterFooterBtn">Enviar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4 pt-4 border-top">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-muted mb-0">&copy; 2025 DEKOR. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3">
+            <a href="#" class="text-muted"><i class="fab fa-instagram fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-facebook-f fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-pinterest fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-youtube fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row">
+            <div class="col-md-6 border-end">
+              <h2 class="h4 mb-4">CLIENTES REGISTRADOS</h2>
+              <p class="mb-4">Te solicitaremos la información imprescindible para agilizar el proceso de compra.</p>
+              <p class="mb-4">¿No encuentras tu pedido? Tal vez hiciste tu compra sin estar registrado. Haz clic <a href="#" class="text-decoration-none">aquí</a> y te indicamos cómo encontrarlo.</p>
+              
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label">Email*</label>
+                  <input type="email" class="form-control" id="loginEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label">Contraseña*</label>
+                  <input type="password" class="form-control" id="loginPassword" required>
+                </div>
+                <div class="mb-3">
+                  <a href="#" class="text-decoration-none">¿Has olvidado tu contraseña?</a>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">No cerrar sesión</label>
+                </div>
+                <button type="submit" class="btn btn-dark w-100">INICIAR SESIÓN</button>
+              </form>
+              
+              <div class="text-center my-4">
+                <span class="text-muted">O bien con</span>
+              </div>
+              
+              <div class="d-flex justify-content-center gap-3 mb-3">
+                <button class="btn btn-outline-primary rounded-circle" style="width: 40px; height: 40px;">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="btn btn-outline-danger rounded-circle" style="width: 40px; height: 40px;">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button class="btn btn-outline-pink rounded-circle" style="width: 40px; height: 40px;">
+                  <i class="fab fa-instagram"></i>
+                </button>
+              </div>
+              
+              <p class="text-center text-muted small mt-3">
+                Al iniciar sesión/registrarme con mi usuario de redes sociales, acepto vincular mi cuenta de acuerdo con la <a href="../privacidad.html" class="text-decoration-none">Política de privacidad</a>
+              </p>
+            </div>
+            
+            <div class="col-md-6">
+              <h2 class="h4 mb-4">NUEVOS CLIENTES</h2>
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-dark" id="createAccountBtn">CREAR UNA CUENTA NUEVA</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Newsletter Modal -->
+  <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="row g-0">
+            <div class="col-md-6 p-4 p-md-5">
+              <h2 class="h3 mb-4">Regístrate gratis y recibe actualizaciones exclusivas y ofertas VIP</h2>
+              <div class="d-grid mb-4">
+                <button class="btn btn-outline-dark" id="joinNowBtn">¡ÚNETE AHORA!</button>
+              </div>
+              <p class="text-muted small">
+                *Al unirte expresas tu consentimiento para recibir comunicaciones comerciales de DEKOR. Puedes cancelar tu suscripción en cualquier momento. Consulta nuestra <a href="../privacidad.html" class="text-decoration-none">Política de Privacidad</a> para más información.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="ratio ratio-1x1">
+                <!-- You'll add the image here -->
+                <div class="bg-light d-flex align-items-center justify-content-center">
+                  <span class="text-muted">Imagen newsletter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/product.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/newsletter.js"></script>
+</body>
+</html>
