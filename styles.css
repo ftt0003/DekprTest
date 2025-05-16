@@ -185,7 +185,9 @@ nav.navbar-alt {
 .search-bar::placeholder {
   color: white;
 }
-
+.search-btn-place::placeholder{
+  color: black;
+}
 /*Ajustes del logo presente en el nav*/
 nav > a {
   animation-duration: 3s;
